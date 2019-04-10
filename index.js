@@ -1,38 +1,54 @@
+var possibleRoasts;
 
 const roastList = [
     {
         number: 1,
         roast:  "Ya mama got a glass eye with  fish in it!",
+        getRoast() {
+           return this.roast;
+        }
     },
 
     {
         number: 2,
         roast:  "Ya mama got a wooden leg with a kickstand",
+        getRoast() {
+            return this.roast;
+         }
     },
 
     {
         number: 3,
         roast:  "Ya mama got one long leg and one short leg - they call her Eileen",
+        getRoast() {
+            return this.roast;
+         }
     },
 ];
 
-function roastMaker() {
-    /*Handles the roast generator
-      
-      2.generates a number between 1 & 3
-      3.returns a snap at random based on the number in the roastList*/
-      console.log("roastMaker method ran")
-      var possibleRoasts = Math.ceil(Math.random()*3);
-      console.log(possibleRoasts);
-
+function randomizer() {
+    //Handles the roast generator by generating a random number btwn 1 & 3
+      console.log("roastMaker method ran");
+      randomNumber = Math.ceil(Math.random()*3);
+      console.log(randomNumber);
 };
+
+function displayRoast() {
+    //displays the roast of the number in roastList based on by number passed in from roastMaker
+    console.log("displayRoast method ran");
+    
+    actualRoast = roastList[randomNumber - 1].roast;
+    console.log(actualRoast);
+    //$('#view-result').text(a);
+}
 
 function handleButtonClick() {
     /* 1.event listener for button
        2.roast generator*/
     $("button").click(function() {
         console.log("handleButtonClick method ran");
-        roastMaker();
+        randomizer();
+        displayRoast(possibleRoasts);
     });
 }
 
