@@ -1,13 +1,28 @@
 
+const roastList = [
+    {
+        number: 1,
+        roast:  "Ya mama got a glass eye with  fish in it!",
+    },
 
+    {
+        number: 2,
+        roast:  "Ya mama got a wooden leg with a kickstand",
+    },
+
+    {
+        number: 3,
+        roast:  "Ya mama got one long leg and one short leg - they call her Eileen",
+    },
+];
 
 function roastMaker() {
     /*Handles the roast generator
-      1.initiate user to pick a number between 1 and 5
-      2.generates that number of snaps
-      3.returns a snap at random*/
+      
+      2.generates a number between 1 & 3
+      3.returns a snap at random based on the number in the roastList*/
       console.log("roastMaker method ran")
-      var possibleRoasts = Math.ceil(Math.random()*9);
+      var possibleRoasts = Math.ceil(Math.random()*3);
       console.log(possibleRoasts);
 
 };
