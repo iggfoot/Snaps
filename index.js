@@ -1,0 +1,1 @@
+var tester = prompt("Hit enter to get roasted!");
