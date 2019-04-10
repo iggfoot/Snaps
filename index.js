@@ -4,25 +4,16 @@ const roastList = [
     {
         number: 1,
         roast:  "Ya mama got a glass eye with  fish in it!",
-        getRoast() {
-           return this.roast;
-        }
     },
 
     {
         number: 2,
         roast:  "Ya mama got a wooden leg with a kickstand",
-        getRoast() {
-            return this.roast;
-         }
     },
 
     {
         number: 3,
         roast:  "Ya mama got one long leg and one short leg - they call her Eileen",
-        getRoast() {
-            return this.roast;
-         }
     },
 ];
 
@@ -36,10 +27,9 @@ function randomizer() {
 function displayRoast() {
     //displays the roast of the number in roastList based on by number passed in from roastMaker
     console.log("displayRoast method ran");
-    
     actualRoast = roastList[randomNumber - 1].roast;
     console.log(actualRoast);
-    //$('#view-result').text(a);
+    $('#view-result').text(actualRoast);
 }
 
 function handleButtonClick() {
