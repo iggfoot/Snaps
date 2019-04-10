@@ -1,36 +1,65 @@
-var possibleRoasts;
+var possibleJokes;
 
-const roastList = [
+const jokeList = [
     {
         number: 1,
-        roast:  "Ya mama got a glass eye with  fish in it!",
+        joke:  "A limbo dancer walks into a bar.",
     },
 
     {
         number: 2,
-        roast:  "Ya mama got a wooden leg with a kickstand",
+        joke:  "I, for one, like Roman numerals.",
     },
 
     {
         number: 3,
-        roast:  "Ya mama got one long leg and one short leg - they call her Eileen",
+        joke:  "Your mother got one long leg and one short leg - they call her Eileen.",
     },
+
+    {
+        number: 4,
+        joke:  "In New York, someone gets stabbed every 52 seoncds. Poor bastard.",
+    },
+
+    {
+        number: 5,
+        joke:  "How many months have 28 days? All of them.",
+    },
+
+    {
+        number: 6,
+        joke:  "Jokes about women's bodily functions aren't funny. Period.",
+    },
+
+    {
+        number: 7,
+        joke:  "Boycott shampoo - demand the real poo!",
+    },
+
+    
 ];
 
+///////////////////////////////////////////////////////////////////////////////
+
+
 function randomizer() {
-    //Handles the roast generator by generating a random number btwn 1 & 3
+    //Handles the joke generator by generating a random number btwn 1 & 7
       console.log("roastMaker method ran");
-      randomNumber = Math.ceil(Math.random()*3);
+      randomNumber = Math.ceil(Math.random()*7);
       console.log(randomNumber);
 };
 
-function displayRoast() {
-    //displays the roast of the number in roastList based on by number passed in from roastMaker
+/////////////////////////////////////////////////////////////////////////////////
+
+function displayJoke() {
+    //displays the roast of the number in roastList based on by number passed in from randomizer function
     console.log("displayRoast method ran");
-    actualRoast = roastList[randomNumber - 1].roast;
-    console.log(actualRoast);
-    $('#view-result').text(actualRoast);
+    actualJoke = jokeList[randomNumber - 1].joke;
+    console.log(actualJoke);
+    $('#view-result').text(actualJoke);
 }
+
+///////////////////////////////////////////////////////////////////////////////////
 
 function handleButtonClick() {
     /* 1.event listener for button
@@ -38,7 +67,7 @@ function handleButtonClick() {
     $("button").click(function() {
         console.log("handleButtonClick method ran");
         randomizer();
-        displayRoast(possibleRoasts);
+        displayJoke(possibleJokes);
     });
 }
 
